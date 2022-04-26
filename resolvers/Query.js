@@ -21,5 +21,11 @@ export const Query = {
         return db.students.find(
             (student) => student.id == id
         );
+    },
+    getTodo:(_, {id}) => {
+        return db.todo.find(todo => todo.id == id)
+    },
+    getUser:(_,{id}) => {
+        return db.users.find(user => user.id == id)
     }
 }

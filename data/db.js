@@ -40,5 +40,51 @@ export const db = {
             id: 3,
             designation: 'GL4'
         },
+    ],
+    todo: [
+        {
+            id:"1",
+            name: "learn GraphQL",
+            content:"learning",
+            status:"IN_PROGRESS",
+            user:1
+        },
+        {
+            id:"2",
+            name: "go out",
+            content:"fun",
+            status:"WAITING",
+            user: 1
+        },
+        {
+            id:"3",
+            name: "eat dinner",
+            content:"pizza",
+            status:"CANCELED",
+            user:2
+        },
+        {
+            id:"4",
+            name: "learn Nestjs",
+            content:"learning",
+            status:"DONE",
+            user:3
+        },
+
+    ],
+    users: [
+        {
+            id:1,
+            name:"nadine boukadida",
+            email:"nadine@gmail.com",
+            todos: [1,2]
+        },
+        {
+            id:2,
+            name:"salem hamdani",
+            email:"salem@gmail.com",
+            todos: [3,4]
+        },
+
     ]
 }

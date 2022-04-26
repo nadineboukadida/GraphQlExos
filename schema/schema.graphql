@@ -18,10 +18,34 @@ type Classroom {
     designation: String!
     students: [Student!]
 }
+enum TodoStatus {
+    WAITING
+    IN_PROGRESS
+    CANCELED
+    DONE
+} 
+
+type Todo {
+    id: String!
+    name: String!
+    content: String!
+    status: TodoStatus!
+    user: User
+}
+type User {
+    id: ID!
+    name: String
+    email: String
+    todos: [Todo]
+}
+
+
 type Query {
     hello(name: String): String!
     infos: Infos!
     getAllStudents: [Student]
     getStudent(id:ID!): Student
+    getTodo(id:String!):Todo
+    getUser(id:ID!):User
 }
 
