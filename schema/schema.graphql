@@ -67,3 +67,11 @@ type Query {
     getTodos:[Todo]
 }
 
+type TodoR {
+    op: String
+    data: Todo
+}
+type Subscription {
+    todo: TodoR
+}
+
