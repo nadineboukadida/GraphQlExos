@@ -77,13 +77,11 @@ export const db = {
             id:1,
             name:"nadine boukadida",
             email:"nadine@gmail.com",
-            todos: [1,2]
         },
         {
             id:2,
             name:"salem hamdani",
             email:"salem@gmail.com",
-            todos: [3,4]
         },
 
     ]

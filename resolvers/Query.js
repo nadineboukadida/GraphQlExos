@@ -25,6 +25,9 @@ export const Query = {
     getTodo:(_, {id}) => {
         return db.todo.find(todo => todo.id == id)
     },
+    getTodos:() => {
+        return db.todo;
+    },
     getUser:(_,{id}) => {
         return db.users.find(user => user.id == id)
     }

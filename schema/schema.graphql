@@ -38,6 +38,23 @@ type User {
     email: String
     todos: [Todo]
 }
+input AddTodoInput {
+    name: String!
+    content: String!
+    user: String!
+
+}
+input UpdateTodoInput {
+    name: String
+    content: String
+    user: String
+    status:TodoStatus
+}
+type Mutation  {
+    addTodo(addTodoInput: AddTodoInput): Todo
+    updateTodo(id:String ,UpdateTodoInput:UpdateTodoInput):Todo
+    deleteTodo(id:String): [Todo]
+}
 
 
 type Query {
@@ -47,5 +64,6 @@ type Query {
     getStudent(id:ID!): Student
     getTodo(id:String!):Todo
     getUser(id:ID!):User
+    getTodos:[Todo]
 }
 
